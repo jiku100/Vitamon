@@ -130,7 +130,10 @@ dmypy.json
 
 # Test file
 /test.py
-
+/test*
+/dataset_info.py
+/dataloader_test.py
+/original
 # Test image
 src/
 

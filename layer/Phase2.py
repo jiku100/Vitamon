@@ -1,10 +1,9 @@
-from re import M
 from tensorflow.keras import Model, Sequential
 import tensorflow.keras.layers as layers
 
 
 class Phase2(Model):
-    def __init__(self) -> None:
+    def __init__(self):
         super(Phase2, self).__init__()
         self.model = Sequential(
             [
@@ -23,6 +22,8 @@ class Phase2(Model):
                 layers.AveragePooling2D(),
                 layers.Dropout(0.5),
                 layers.Flatten(),
+                layers.Dense(7, activation='relu'),
+                layers.Dense(7, activation='softmax')   
             ]
         )
     
